@@ -1,4 +1,12 @@
 const fetch = require('node-fetch');
+const admin = require('firebase-admin');
+var serviceAccount = require("adminsdk_key.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://justnoteit2021-default-rtdb.firebaseio.com"
+});
+let db = admin.database();
 
 exports.handler = async function(event, context) {
 
@@ -17,7 +25,11 @@ exports.handler = async function(event, context) {
 
     await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`)
     .then(res => {
-        console.log(res.status);
+        //console.log(res.status);
+
+        if (res.status == 200) console.log(res.body);
+        
+
     });
 
     return {
