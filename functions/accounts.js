@@ -24,7 +24,7 @@ exports.handler = async function(event, context) {
     
     const { accessToken } = JSON.parse(event.body);
 
-    await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`)
+    await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`, {method: "GET"})
     .then(res => {
         //console.log(res.status);
 
