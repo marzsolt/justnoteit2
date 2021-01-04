@@ -17,7 +17,7 @@ exports.handler = async function(event, context) {
 
     await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`)
     .then(res => {
-        console.log(res.statusCode);
+        console.log(res.status);
     });
 
     return {
