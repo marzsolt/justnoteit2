@@ -1,29 +1,12 @@
-'use strict';
-const express = require('express');
-const serverless = require('serverless-http');
-const bodyParser = require('body-parser');
+exports.handler = async function(event, context) {
+    console.log("Event:");
+    console.log(event);
 
-/*function updateDatabase(data) {
-  ... // update the database
-  return newValue;
-}*/
+    console.log("Context:");
+    console.log(context);
 
-const app = express();
-app.use(bodyParser);
-app.post('/authenticate', (req, res) => {
-    //const newValue = updateDatabase(res.body);
-    
-    const { accessToken } = req.body;
-
-    console.log(req.body);
-
-    /*res.json({
-        token: accessToken
-    });*/
-
-    res.status(200).send({
-        token: accessToken
-    });
-});
-
-module.exports.handler = serverless(app);
+    return {
+        statusCode: 200,
+        body: JSON.stringify({message: "Hello fucking World"})
+    };
+}
