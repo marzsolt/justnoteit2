@@ -1,7 +1,6 @@
 'use strict';
 const express = require('express');
 const serverless = require('serverless-http');
-const app = express();
 const bodyParser = require('body-parser');
 
 /*function updateDatabase(data) {
@@ -9,13 +8,18 @@ const bodyParser = require('body-parser');
   return newValue;
 }*/
 
+const app = express();
 app.use(bodyParser);
 app.post('/authenticate', (req, res) => {
     //const newValue = updateDatabase(res.body);
     
     const { accessToken } = req.body;
 
-    res.json({
+    /*res.json({
+        token: accessToken
+    });*/
+
+    return res.status(200).send({
         token: accessToken
     });
 });
