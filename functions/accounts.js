@@ -29,12 +29,12 @@ exports.handler = async function(event, context) {
         //console.log(res.status);
 
         if (res.status == 200) {
-            /*const { name, id } = res.body;
+            const { name, id } = res.body;
             
             console.log({
                 name: name,
                 id: id
-            });*/
+            });
 
             console.log(res);
         }
