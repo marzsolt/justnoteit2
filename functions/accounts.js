@@ -6,12 +6,11 @@ exports.handler = async function(event, context) {
     console.log(context);*/
     
     const { accessToken } = JSON.parse(event.body);
-    console.log(accessToken);
 
-    /*await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`)
+    await fetch(`https://graph.facebook.com/v8.0/me?access_token=${accessToken}`)
     .then(res => {
         console.log(res);
-    });*/
+    });
 
     return {
         statusCode: 200,
