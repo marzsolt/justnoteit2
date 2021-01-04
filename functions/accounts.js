@@ -1,8 +1,10 @@
 const fetch = require('node-fetch');
 const admin = require('firebase-admin');
 
+var serviceAccount = require("adminsdk_key.json");
+
 admin.initializeApp({
-    credential: "adminsdk_key.json",
+    credential: admin.credential.cert(serviceAccount),
     databaseURL: "https://justnoteit2021-default-rtdb.firebaseio.com"
 });
 let db = admin.database();
