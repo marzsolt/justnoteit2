@@ -1,4 +1,12 @@
+import fetch from "node-fetch";
+
 exports.handler = async function(event, context) {
+
+    // Only allow POST
+    if (event.httpMethod !== "POST") {
+        return { statusCode: 405, body: "Method Not Allowed" };
+    }
+    
     /*console.log("Event:");
     console.log(event);
 
