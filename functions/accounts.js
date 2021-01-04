@@ -15,6 +15,8 @@ app.post('/authenticate', (req, res) => {
     
     const { accessToken } = req.body;
 
+    console.log(req.body);
+
     /*res.json({
         token: accessToken
     });*/
