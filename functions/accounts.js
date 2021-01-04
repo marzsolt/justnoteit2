@@ -21,7 +21,7 @@ app.post('/authenticate', (req, res) => {
         token: accessToken
     });*/
 
-    return res.status(200).send({
+    res.status(200).send({
         token: accessToken
     });
 });
