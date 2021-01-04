@@ -5,6 +5,7 @@ import { Nav, PrivateRoute } from '_components';
 import { Home } from 'home/Home';
 import { EditAccount } from 'home/EditAccount';
 import { Login } from 'login/Login';
+import Notes from 'notes/Notes';
 
 function App() {
     const pathname = useLocation().pathname || '';
@@ -16,6 +17,7 @@ function App() {
                 <Switch>
                     <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                     <PrivateRoute exact path="/" component={Home} />
+                    <PrivateRoute exact path="/notes" component={Notes} />
                     <PrivateRoute path="/edit/:id" component={EditAccount} />
                     <Route path="/login" component={Login} />
                     <Redirect from="*" to="/" />

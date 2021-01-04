@@ -13,8 +13,10 @@ function Login({ history }) {
     return (
         <div className="col-md-6 offset-md-3 mt-5 text-center">
             <div className="card">
-                <h4 className="card-header">React - Facebook Login Example</h4>
+                <h4 className="card-header">JustNoteIt</h4>
                 <div className="card-body">
+                    <span>In order to use the application, please login with Facebook. It takes just a sec :) </span><br/>
+                    <img src="http://simpleicon.com/wp-content/uploads/note.png" style={{width: 300}} alt="JustNoteIt"/>
                     <button className="btn btn-facebook" onClick={accountService.login}>
                         <i className="fa fa-facebook mr-1"></i>
                         Login with Facebook

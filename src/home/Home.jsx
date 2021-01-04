@@ -30,8 +30,18 @@ function Home() {
 
     return (
         <div>
-            <h2>You're logged in with React & Facebook!!</h2>
-            <p>All accounts from secure api end point:</p>
+            <h2>Welcome {accounts && accounts[0].name}!</h2>
+            <span>This is a beautiful application of which purpose is to let you browse among the different notes and let them be shared by you via Facebook.</span><br/>
+            <span><b>FYI:</b> your Facebook ID is {accounts && accounts[0].facebookId} :)</span>        
+        </div>
+    );
+}
+
+export { Home };
+
+
+/*
+<p>All accounts from secure api end point:</p>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -68,9 +78,4 @@ function Home() {
                         </tr>
                     }
                 </tbody>
-            </table>
-        </div>
-    );
-}
-
-export { Home };
+            </table>*/
