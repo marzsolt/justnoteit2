@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const admin = require('firebase-admin');
 
-var serviceAccount = require("adminsdk_key.json");
+var serviceAccount = require("./adminsdk_key.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
