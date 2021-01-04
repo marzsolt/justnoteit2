@@ -6,12 +6,12 @@ exports.handler = async function(event, context) {
     if (event.httpMethod !== "POST") {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
-    
+
     /*console.log("Event:");
     console.log(event);
 
     console.log("Context:");
-    console.log(context);*/
+    console.log(context); */
     
     const { accessToken } = JSON.parse(event.body);
 
