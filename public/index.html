@@ -4,23 +4,39 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React - Facebook Login Example</title>
+    <title>JustNoteIt</title>
 
     <!-- bootstrap & font-awesome css -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCmWAj_sng8iXQNqH1TBWSkvhlDdEHj0Tg",
+        authDomain: "justnoteit2021.firebaseapp.com",
+        projectId: "justnoteit2021",
+        storageBucket: "justnoteit2021.appspot.com",
+        messagingSenderId: "397434568148",
+        appId: "1:397434568148:web:51a097bb2d6bf552352a41"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="app"></div>
 
     <!-- credits -->
     <div class="text-center mt-4">
         <p>
-            <a href="https://jasonwatmore.com/post/2020/10/25/react-facebook-login-tutorial-example">React - Facebook Login Example & Tutorial</a>
-        </p>
-        <p>
-            <a href="https://jasonwatmore.com">JasonWatmore.com</a>
+            PPCU FIT - Integration of Information Systems (IoIS) - Team JustDoIt - Ábrahám Domonkos, Huszka Dániel, Márkos Zsolt - fall 2020
         </p>
     </div>
 </body>

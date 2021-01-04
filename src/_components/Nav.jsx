@@ -13,7 +13,7 @@ function Nav() {
     if (!account) return null;
 
     return (
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-light bg-light">
             <div className="navbar-nav">
                 <NavLink exact to="/" className="nav-item nav-link">Home</NavLink>
                 <button className="btn btn-link nav-item nav-link" onClick={accountService.logout}>Logout</button>

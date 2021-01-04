@@ -33,6 +33,9 @@ async function login() {
 async function apiAuthenticate(accessToken) {
     // authenticate with the api using a facebook access token,
     // on success the api returns an account object with a JWT auth token
+
+    console.log(accessToken); // TODO: DELETE ThIS!
+
     const response = await axios.post(`${baseUrl}/authenticate`, { accessToken });
     const account = response.data;
     accountSubject.next(account);
